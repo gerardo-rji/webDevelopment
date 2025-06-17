@@ -1,0 +1,56 @@
+.aboutMe{
+  background-color: #B4EBE6;
+  .forum-regular {
+  font-family: "Forum", serif;
+  font-weight: 400;
+  font-style: normal;
+  }
+}
+
+.nunito-sans-font {
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100,
+  "YTLC" 500;
+}
+
+.bg-body-tertiary {
+    --bs-bg-opacity: 1;
+    background-color: rgb(32 87 129) !important;
+}
+
+.skills {
+  background-color: #FBF8EF;
+}
+
+.icon-square {
+  border-radius: 0.75rem;
+  width: 4rem;
+  height: 4rem;
+}
+
+.contactMe {
+  background-color: #FBF8EF;
+}
+
+.footer {
+  background-color: #B4EBE6;
+}
+
+.navbar-brand,.navbar-nav > a {
+  color: white;
+}
+
+.carousel-item > .bg-body-tertiary {
+    --bs-bg-opacity: 1;
+    background-color: rgb(251 248 239) !important;
+}
+
+.carousel .carousel-indicators button {background-color: grey;}
+.carousel .carousel-indicators button.active {background-color: blue;}
+
+.carousel-control-next, .carousel-control-prev {
+    filter: invert(100%);
+}
