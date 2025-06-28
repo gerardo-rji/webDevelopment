@@ -1,3 +1,12 @@
+const app = require('./app') // la aplicación Express real
+const config = require('./utils/config')
+const logger = require('./utils/logger')
+
+app.listen(config.PORT, () => {
+  logger.info(`Server running on port ${config.PORT}`)
+})
+
+/*
 require('dotenv').config()
 const express = require('express')
 const app = express()
@@ -59,7 +68,7 @@ noteSchema.set('toJSON', {
       content: "GET and POST are the most important methods of HTTP protocol",
       important: true
     }
-  ] */
+  ]
 
 app.get('/', (request, response) => {
   response.send('<h1>Hello World!</h1>')
@@ -95,7 +104,7 @@ app.get('/api/notes/:id', (req, res, next) => {
       res.json(note)
     } else {
       res.status(404).end()
-    } */
+    }
 })
 
 app.delete('/api/notes/:id', (req, res, next) => {
@@ -110,7 +119,7 @@ app.delete('/api/notes/:id', (req, res, next) => {
 
   res.status(204).end()
 
- */
+
 })
 
 /*  const generateId = () => {
@@ -119,7 +128,7 @@ app.delete('/api/notes/:id', (req, res, next) => {
         : 0
       return maxId + 1
     }
-*/
+
 
 app.post('/api/notes', (req, res, next) => {
   const body = req.body
@@ -148,7 +157,7 @@ app.put('/api/notes/:id', (req, res, next) => {
         content: body.content,
         important: body.important
       }
-  */
+
 
   Note.findByIdAndUpdate(req.params.id, { content, important }, { new: true, runValidators: true, context: 'query' })
     .then(updatedNote => {
@@ -181,3 +190,4 @@ const PORT = process.env.PORT
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`)
 })
+*/
